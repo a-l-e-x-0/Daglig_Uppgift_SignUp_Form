@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Sign-Up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create Account</h1>
+
+      <div class="steps">
+        <span id="stepIndicator1" class="active">1. Account</span>
+        <span id="stepIndicator2">2. Profile</span>
+        <span id="stepIndicator3">3. Confirm</span>
+      </div>
+
+      <form id="signupForm">
+        <section id="step1" class="step active">
+          <h2>Account</h2>
+
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" />
+
+          <p id="error1" class="error"></p>
+
+          <button type="submit">Next</button>
+        </section>
+
+        <section id="step2" class="step">
+          <h2>Profile</h2>
+
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" />
+
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" />
+
+          <label for="age">Age</label>
+          <input type="number" id="age" />
+
+          <p id="error2" class="error"></p>
+
+          <div class="buttons">
+            <button type="button" id="backButton">Back</button>
+            <button type="submit">Next</button>
+          </div>
+        </section>
+
+        <section id="step3" class="step">
+          <h2>Confirm</h2>
+
+          <div class="summary">
+            <p>Email: <span id="summaryEmail"></span></p>
+            <p>First name: <span id="summaryFirstName"></span></p>
+            <p>Last name: <span id="summaryLastName"></span></p>
+            <p>Age: <span id="summaryAge"></span></p>
+          </div>
+
+          <p id="error3" class="error"></p>
+
+          <div class="buttons">
+            <button type="button" id="backButton2">Back</button>
+            <button type="submit">Create account</button>
+          </div>
+        </section>
+      </form>
+
+      <p id="success" class="success"></p>
+      <pre id="jsonOutput"></pre>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
